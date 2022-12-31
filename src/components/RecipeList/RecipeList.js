@@ -1,15 +1,16 @@
 import PropTypes from 'prop-types';
-import { Recipe } from './Recipe';
+import { Recipe } from '../Recipe/Recipe';
+import { List } from './RecipeList.styled';
 
 export const RecipeList = ({ recipes }) => {
   return (
-    <ul>
+    <List>
       {recipes.map(recipe => (
         <li key={recipe.id}>
           <Recipe recipe={recipe} />
         </li>
       ))}
-    </ul>
+    </List>
   );
 };
 
@@ -20,6 +21,7 @@ export const RecipeList = ({ recipes }) => {
 
 RecipeList.propTypes = {
   recipes: PropTypes.arrayOf(
-    PropTypes.shape({ id: PropTypes.number.isRequired, })
+    PropTypes.shape({ id: PropTypes.number.isRequired, 
+    })
   ).isRequired,
 };
