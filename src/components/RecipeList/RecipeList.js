@@ -7,7 +7,7 @@ export const RecipeList = ({ recipes }) => {
     <List>
       {recipes.map(recipe => (
         <li key={recipe.id}>
-          <Recipe recipe={recipe} />
+          <Recipe recipe={recipe} /> 
         </li>
       ))}
     </List>
